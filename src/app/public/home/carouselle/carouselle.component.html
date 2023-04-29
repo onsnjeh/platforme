@@ -1,0 +1,11 @@
+ <ngb-carousel  [showNavigationArrows]="true" [showNavigationIndicators]="true" [interval]="3" *ngIf="images">
+    <ng-template ngbSlide>
+      <img [src]="images[0]" alt="image1" width="100%">
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[1]" alt="image2" width="100%">
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[2]" alt="image3" width="100%">
+    </ng-template>
+  </ngb-carousel>

@@ -1,0 +1,180 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-6">
+      <div class="card my-5 ">
+        <div class="card-body ">
+          <div class="text-center mb-4">
+            <h1 class="h4 text-gray-900">Connectez-vous!</h1>
+          </div>
+          <form class="login-form">
+            <div class="form-group mb-3">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-user" aria-hidden="true"></i></span>
+                  <input type="text" name="" class="form-control input_user"   placeholder="nom ">
+                  
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group mb-3">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-key"></i></span>
+                  <input type="password" name="" class="form-control input_pass"  placeholder="mot de passe">
+                  
+                </div>
+              </div>
+            </div>
+            <div class="d-xl-grid gap-2">
+            <button class="btn btn-primary mb-3 mt-3"  (click)="login()">connexion</button>
+            </div>
+          </form>
+          <hr>
+          <div class="text-center">
+            <a class="small" routerLink="/forget-pass">Mot de passe oublié?</a>
+          </div>
+          <div class="text-center my-4">
+            <span class="text-gray-600">Ou connectez-vous avec:</span>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-6 mb-2">
+              <button class="btn btn-google btn-block" >
+                <i class="fab fa-google fa-fw"></i> Connexion avec Google
+              </button>
+            </div>
+            <div class="col-md-6 col-sm-6 mb-2">
+              <button class="btn btn-facebook btn-block" >
+                <i class="fab fa-facebook-f fa-fw"></i> Connexion avec Facebook
+              </button>
+            </div>
+          </div>
+          <hr>
+          <div class="text-center">
+            <span class="text-gray-600">Vous n'avez pas encore un compte? </span><a class="small" routerLink="/sign-up">Inscrivez vous</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+<div class="container d-flex justify-content-center " style="margin: 100px;">
+ 
+  <div class="card shadow-sm w-50 rounded overflow-hidden ">
+    <div class="card-body p-0">
+      <div class="container">
+        <div class="row w-100">
+          <div class="col-md-6 offset-md-3">
+            <h2 class="text-center text-primary ">Connectez-vous !</h2>
+            
+            <form class="login-form py-5 w-120">
+              <div class="row " >
+                <div class="col-xs-6 col-sm-6 col-md-6 ">
+                  <a href="#" class="btn  btn-info btn-block"> <i class="fab fa-facebook-f"></i>  Facebook</a>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <a href="#" class="btn  btn-info btn-block"><i class="fa-brands fa-google-plus-g"></i>  Google</a>
+                </div>
+              </div>
+                <hr class="hr-or">
+                <span class="span-or " style="margin-left: 45%;">or</span>
+              <div class="login-or ">
+              
+
+                <div class="form-group mb-3">
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-user" aria-hidden="true"></i></span>
+                      <input type="text" name="" class="form-control input_user"   placeholder="Admin">
+                      
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="form-group mb-3">
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-key"></i></span>
+                      <input type="password" name="" class="form-control input_pass" ngModel="password" placeholder="mot de passe">
+                      
+                    </div>
+                  </div>
+                </div>
+      
+            
+              <button class="btn btn-primary mb-3 mt-3 w-100" (click)="login()">connexion</button>
+              
+              <hr>
+              <br><a class="text-sm text-paleBlue" routerLink="/forget-pass">Mot de passe oublié ?</a><br><small class="text-gray-500">vous n'avez pas encore un compte? </small><a class="text-sm text-paleBlue" routerLink="/sign-up">Inscrivez vous</a>
+            </div> </form>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <div class="card my-5">
+        <div class="card-body p-0">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="login-form">
+                <div class="text-center mb-4">
+                  <h1 class="h4 text-gray-900">Connectez-vous!</h1>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Adresse e-mail" formControlName="email">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Mot de passe" formControlName="password">
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block">Connexion</button>
+                </form>
+                <hr>
+                <div class="text-center">
+                  <a class="small" href="#">Mot de passe oublié?</a>
+                </div>
+                <div class="text-center">
+                  <p>Ou connectez-vous avec:</p>
+                  <button class="btn btn-google btn-block mb-2" (click)="loginWithGoogle()">
+                    <i class="fab fa-google fa-fw"></i> Connexion avec Google
+                  </button>
+                  <button class="btn btn-facebook btn-block mb-2" (click)="loginWithFacebook()">
+                    <i class="fab fa-facebook-f fa-fw"></i> Connexion avec Facebook
+                  </button>
+                </div>
+                <div class="text-center">
+                  <a class="small" href="#">Pas encore inscrit? Inscrivez-vous!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->

@@ -1,0 +1,128 @@
+    <div class="row">
+        <div class="card container-xxl mt-4 col-4 col-md-4">
+            <div class="text-center text-uppercase col-12 bg-light mb-2">
+                <h2>Recherche avancée</h2>
+
+            </div>
+            <div class="row g-4">
+                <form [formGroup]="recherche" (ngSubmit)="onSubmit()">
+                    <div class="row g-3">
+
+                        <div class="col-12 mb-4">
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Roundtrip"
+                                    value="doc-vigeur">
+                                <label class="form-check-label" for="documents en vigueur">Documents en vigueur</label>
+
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Oneway"
+                                    value="doc-aborge">
+                                <label class="form-check-label" for="documents abrogés">Documents abrogés</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="MultiCity"
+                                    value="option3">
+                                <label class="form-check-label" for="tous les documents">Tous les documents</label>
+
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <label class="form-label" for="motsCles">Mots clés :</label>
+                                <input type="text" placeholder="Rechercher par mot clé..." class="form-control"
+                                    formControlName="motsCles">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <label class="form-label" for="categories">Catégories :</label>
+                                <select class="form-select">
+                                    <option selected="" hidden="">Toutes les catégories</option>
+                                    <option value="1">Juridique</option>
+                                    <option value="2">Sociale</option>
+                                    <option value="3">Fiscale</option>
+                                    <option value="4">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <label class="form-label" for="date">Date :</label>
+                                <input type="date" class="form-control" formControlName="date">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <label class="form-label" for="natureTexte">Nature de texte :</label>
+                                <select class="form-select">
+                                    <option selected="" hidden="">Tous...</option>
+                                    <option value="1">Loi</option>
+                                    <option value="2">Guide</option>
+                                    <option value="3">Douane</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--  Accordéon -->
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                                        data-bs-parent="#accordionExample">
+                                        Plus d'options
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="content">
+                                                    <div class="tag-box" style="width: 100%;">
+                                                        <ul class="form-floating">
+                                                            <select class="form-select"
+                                                                (change)="onSelectedValueChange($event)">
+                                                                <option selected="" hidden="">tous ..</option>
+                                                                <option value="loi">loi</option>
+                                                                <option value="guide">guide</option>
+                                                                <option value="douane">douane</option>
+                                                            </select>
+                                                            <label>Choisir des tags</label>
+                                                            <div *ngFor="let tag of tags">
+                                                                <li>
+                                                                    {{ tag }} <i (click)="supprimerLi(tag)"
+                                                                        class="fa-sharp fa-solid fa-circle-xmark"></i>
+                                                                </li>
+                                                            </div>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-4">
+                            <button class="btn btn-primary text-uppercase" type="submit"><i class="fa fa-search-plus"
+                                    aria-hidden="true"></i> Rechercher</button>
+                        </div>
+
+
+
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="card  container mt-4  col-5 col-md-7">
+            contenu à afficher
+            <app-list-articles></app-list-articles>
+        </div>

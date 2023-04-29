@@ -1,0 +1,22 @@
+<div id="documents" class="container-xxl bg-light my-5 py-5">
+    <div class="container">
+<!-- 
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="text-primary text-uppercase mb-2"></p>
+
+        </div> -->
+        <div class="row g-3" >
+            <div class="col-lg-4  wow fadeInUp" data-wow-delay="0.1s" *ngFor="let item of data.slice(-6)" >
+<app-carte-article [item]="item" ></app-carte-article>
+            </div>
+        </div>
+
+
+
+        <!-- <div id="documents" class="container-xxl bg-light my-5 py-5 ">
+
+        
+        <div class="row g-3" >
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s" *ngFor="let item of data.slice(-6)" >
+<app-carte-article [item]="item" ></app-carte-article>
+        </div> -->

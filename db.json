@@ -1,0 +1,654 @@
+{
+  
+  "compte": [
+    {
+      "id": 1,
+      "nom": "client1",
+      "prenom": "client1",
+      "email": "clien1@gmail",
+      "role": "client",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "nom": "client2",
+      "prenom": "client2",
+      "email": "client2@gmail",
+      "role": "client",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "nom": "expert1",
+      "prenom": "expert1",
+      "email": "expert1@gmail",
+      "role": "expert",
+      "password": "123456"
+    },
+    {
+      "id": 4,
+      "nom": "expert2",
+      "prenom": "expert2",
+      "email": "expert2@gmail",
+      "role": "expert",
+      "password": "123456"
+    },
+    {
+      "id": 5,
+      "nom": "manager1",
+      "prenom": "manager1",
+      "email": "manager1@gmail",
+      "role": "manager",
+      "password": "123456"
+    },
+    {
+      "id": 6,
+      "nom": "manager2",
+      "prenom": "manager2",
+      "email": "manager2@gmail",
+      "role": "manager",
+      "password": "123456"
+    },
+    {
+      "id": 7,
+      "nom": "client3",
+      "prenom": "client3",
+      "email": "client3@gmail",
+      "role": "client",
+      "password": "123456"
+    },
+    {
+      "id": 8,
+      "nom": "client4",
+      "prenom": "client4",
+      "email": "client4@gmail",
+      "role": "client",
+      "password": "123456"
+    },
+    {
+      "id": 9,
+      "nom": "expert3",
+      "prenom": "expert3",
+      "email": "expert3@gmail",
+      "role": "expert",
+      "password": "123456"
+    },
+    {
+      "id": 10,
+      "nom": "expert4",
+      "prenom": "expert4",
+      "email": "expert4@gmail",
+      "role": "expert",
+      "password": "123456"
+    },
+    {
+      "id": 11,
+      "nom": "manager3",
+      "prenom": "manager3",
+      "email": "manager3@gmail",
+      "role": "manager",
+      "password": "123456"
+    },
+    {
+      "id": 12,
+      "nom": "manager4",
+      "prenom": "manager4",
+      "email": "manager4@gmail",
+      "role": "manager",
+      "password": "123456"
+    },
+    {
+      "id": 13,
+      "nom": "client5",
+      "prenom": "client5",
+      "email": "client5@gmail",
+      "role": "client",
+      "password": "123456"
+    },
+    {
+      "id": 14,
+      "nom": "client6",
+      "prenom": "client6",
+      "email": "client6@gmail",
+      "role": "client",
+      "password": "123456"
+    },
+    {
+      "id": 15,
+      "nom": "expert5",
+      "prenom": "expert5",
+      "email": "expert5@gmail",
+      "role": "expert",
+      "password": "12345"
+    },
+    {
+      "id": 16,
+      "nom": "manager5",
+      "prenom": "manager5",
+      "email": "manager5@gmail",
+      "role": "manager",
+      "password": "12345"
+    },
+    {
+      "id": 17,
+      "nom": "expert6",
+      "prenom": "expert6",
+      "email": "expert6@gmail",
+      "role": "expert",
+      "password": "12345"
+    },
+    {
+      "id": 18,
+      "nom": "manager6",
+      "prenom": "manager6",
+      "email": "manager6@gmail",
+      "role": "manager",
+      "password": "12345"
+    }
+  ],
+  "article": [
+    {
+      "id": 1,
+      "titre": "article 1",
+      "reference": "2222",
+      "date_publication": "2023-12-22",
+      "abstract": "No matter how far along you are in your sophistication as an amateur astronomer, there is always one.",
+      "tags": [
+        1,
+        3,
+        4
+      ],
+      "categorie": "juridique",
+      "type": "juridique",
+      "theme": "juridique"
+    },
+    {
+      "id": 2,
+      "titre": "article 2",
+      "reference": "2222",
+      "date": "12/2/2021",
+      "abstract": "No matter how far along you are in your sophistication as an amateur astronomer, there is always one.",
+      "tags": [
+        1,
+        2,
+        4
+      ],
+      "categorie": "juridique",
+      "type": "juridique",
+      "theme": "juridique"
+    },
+    {
+      "id": 3,
+      "titre": "article 3",
+      "reference": "2222",
+      "date": "12/2/2021",
+      "abstract": "No matter how far along you are in your sophistication as an amateur astronomer, there is always one.",
+      "tags": [
+        2,
+        3
+      ],
+      "categorie": "social",
+      "type": "social",
+      "theme": "social"
+    },
+    {
+      "id": 4,
+      "titre": "article 4",
+      "reference": "2222",
+      "date_publication": "12/2/2021",
+      "abstract": "No matter how far along you are in your sophistication as an amateur astronomer, there is always one.",
+      "tags": [
+        4
+      ],
+      "categorie": "fiscal",
+      "type": "fiscal",
+      "theme": "fiscal"
+    },
+    {
+      "id": 5,
+      "titre": "douane fiscal",
+      "reference": "2222",
+      "date_publication": "12/2/2021",
+      "abstract": "No matter how far along you are in your sophistication as an amateur astronomer, there is always one.",
+      "tags": [
+        2
+      ],
+      "categorie": "juridique",
+      "type": "juridique",
+      "theme": "juridique"
+    },
+    {
+      "id": 6,
+      "titre": "decrets social",
+      "reference": "2222",
+      "date": "12/2/2021",
+      "abstract": "No matter how far along you are in your sophistication as an amateur astronomer, there is always one.",
+      "tags": [
+        1
+      ],
+      "categorie": "juridique",
+      "type": "juridique",
+      "theme": "juridique"
+    },
+    {
+      "id": 7,
+      "titre": "arretés juridique",
+      "reference": "2222",
+      "date_publication": "12/2/2021",
+      "abstract": "No matter how far along you are in your sophistication as an amateur astronomer, there is always one.",
+      "tags": [
+        3
+      ],
+      "categorie": "juridique",
+      "type": "juridique",
+      "theme": "juridique"
+    },
+    {
+      "id": 8,
+      "titre": "décrets juridique",
+      "reference": "2222",
+      "date_publication": "12/2/2021",
+      "abstract": "No matter how far along you are in your sophistication as an amateur astronomer, there is always one.",
+      "tags": [
+        1,
+        3,
+        4
+      ],
+      "categorie": "juridique",
+      "type": "juridique",
+      "theme": "juridique"
+    },
+    {
+      "id": 9,
+      "titre": "test",
+      "reference": 2001,
+      "date_publication": "2001-12-11",
+      "abstract": "test 1",
+      "tags": "test1",
+      "categorie": "fiscal",
+      "type": "type fiscal",
+      "theme": "theme fiscal",
+      "textFichier": "",
+      "fichier": "C:\\fakepath\\chapitre 2.odt",
+      "date": "2023-04-17T22:24:12.652Z"
+    },
+    {
+      "id": 10,
+      "titre": "test1",
+      "reference": 2001,
+      "date_publication": "2001-12-11",
+      "abstract": "test 1",
+      "tags": "test1",
+      "categorie": "fiscal",
+      "type": "type fiscal",
+      "theme": "theme fiscal",
+      "fichier": "C:\\fakepath\\chapitre 2.odt",
+      "date": "2023-04-17T22:27:38.407Z"
+    },
+    {
+      "id": 11,
+      "titre": "test 2023",
+      "reference": 2323,
+      "date_publication": "2023-12-22",
+      "abstract": "test 2023",
+      "tags": "test 2023",
+      "categorie": "social",
+      "type": "social",
+      "theme": "social",
+      "textFichier": "test 2023",
+      "fichier": "C:\\fakepath\\chapitre 3.odt",
+      "date": "2023-04-27T21:51:29.097Z"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "title": "option 1",
+      "description": "Description d'option 1",
+      "level": 0,
+      "children": [
+        {
+          "id": 2,
+          "title": "option 1.1",
+          "description": "Description de l'option 1.1",
+          "level": 1,
+          "parentId": 1
+        },
+        {
+          "id": 3,
+          "title": "option 1.2",
+          "description": "Description de l'option 1.2",
+          "level": 1,
+          "parentId": 1,
+          "children": [
+            {
+              "id": 4,
+              "title": "option 1.2.1",
+              "description": "Description du option 1.2.1",
+              "level": 2,
+              "parentId": 3,
+              "children": [
+                {
+                  "id": 5,
+                  "title": "option 1.2.1.1",
+                  "description": "Description du option 1.2.1.1",
+                  "level": 3,
+                  "parentId": 3,
+                  "children": [
+                    {
+                      "id": 4,
+                      "title": "option 1.2.1.1.1",
+                      "description": "Description du option 1.2.1.1.1",
+                      "level": 4,
+                      "parentId": 3,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 5,
+              "title": "option 1.2.2",
+              "description": "Description du option 1.2.2",
+              "level": 2,
+              "parentId": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "option 2",
+      "description": "Description du option 2",
+      "level": 0,
+      "children": [
+        {
+          "id": 7,
+          "title": "option 2.1",
+          "description": "Description de l'option 2.1",
+          "level": 1,
+          "parentId": 6
+        },
+        {
+          "id": 8,
+          "title": "option 2.2",
+          "description": "Description de l'option 2.2",
+          "level": 1,
+          "parentId": 6,
+          "children": [
+            {
+              "id": 9,
+              "title": "option 2.2.1",
+              "description": "Description du option 2.2.1",
+              "level": 2,
+              "parentId": 8,
+              "children": [
+                {
+                  "id": 12,
+                  "title": "option 2.2.1.1",
+                  "description": "Description du option 2.2.1.1",
+                  "level": 3,
+                  "parentId": 8,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": 10,
+              "title": "option 2.2.2",
+              "description": "Description du option 2.2.2",
+              "level": 2,
+              "parentId": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "option 3",
+      "description": "Description d'option 3",
+      "level": 0,
+      "children": []
+    }
+  ],
+  
+  "offre": [
+    {
+      "id": 1,
+      "titre": "Offre1",
+      "periode": "1 mois",
+      "prix": 100,
+      "description": "Description de l'offre 1",
+      "dateDebut": "2022-01-01",
+      "dateFin": "2022-01-31"
+    },
+    {
+      "id": 2,
+      "titre": "Offre2",
+      "periode": "3 mois",
+      "prix": 250,
+      "description": "Description de l'offre 2",
+      "dateDebut": "2022-02-01",
+      "dateFin": "2022-04-30"
+    },
+    {
+      "id": 3,
+      "titre": "Offre3",
+      "periode": "6 mois",
+      "prix": 450,
+      "description": "Description de l'offre 3",
+      "dateDebut": "2022-05-01",
+      "dateFin": "2022-10-31"
+    },
+    {
+      "id": 4,
+      "titre": "Offre4",
+      "periode": "12 mois",
+      "prix": 800,
+      "description": "Description de l'offre 4",
+      "dateDebut": "2022-01-01",
+      "dateFin": "2022-12-31"
+    }
+  ],
+  "utilisateur": [
+    {
+      "id": 1,
+      "firstname": "Mr Akram",
+      "lastname": "ddd",
+      "birthdate": "",
+      "profile": "assets/img/testimonial-1.jpg",
+      "job": "profession",
+      "message": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit."
+    },
+    {
+      "id": 2,
+      "firstname": "Mr Yessine",
+      "lastname": "Elleuch",
+      "birthdate": "",
+      "profile": "assets/img/testimonial-2.jpg",
+      "job": "profession",
+      "message": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit."
+    },
+    {
+      "id": 3,
+      "firstname": "Mr Salmen",
+      "lastname": "Ajili",
+      "birthdate": "",
+      "profile": "assets/img/testimonial-3.jpg",
+      "job": "profession",
+      "message": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit."
+    },
+    {
+      "id": 4,
+      "firstname": "Mme Hazar",
+      "lastname": "Ayedi",
+      "birthdate": "",
+      "profile": "assets/img/testimonial-4.jpg",
+      "job": "profession",
+      "message": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit."
+    }
+  ],
+  "partenaires": [
+    {
+      "id": 1,
+      "nom": "zitouna",
+      "url": "assets/img/team-1.jpg"
+    },
+    {
+      "id": 2,
+      "nom": "TT",
+      "url": "assets/img/team-2.jpg"
+    },
+    {
+      "id": 3,
+      "nom": "AA",
+      "url": "assets/img/team-3.jpg"
+    },
+    {
+      "id": 4,
+      "nom": "SS",
+      "url": "assets/img/team-4.jpg"
+    }
+  ],
+ 
+  "categorie": [
+    {
+      "id": "1",
+      "name": "fiscal",
+      "iconClass": "fa fa-university",
+      "nombre": "6"
+    },
+    {
+      "id": "2",
+      "name": "social",
+      "iconClass": "fa fa-users",
+      "nombre": "10"
+    },
+    {
+      "id": "3",
+      "name": "juridique",
+      "iconClass": "fa fa-balance-scale",
+      "nombre": "2"
+    },
+    {
+      "id": "4",
+      "name": "autres",
+      "iconClass": "fa fa-plus-circle"
+    }
+  ],
+  "type": [
+    {
+      "id": 1,
+      "name": "type fiscal",
+      "categorieId": 1,
+      "categorieName": "fiscal"
+    },
+    {
+      "id": 2,
+      "name": "type fiscal",
+      "categorieId": 1,
+      "categorieName": "fiscal"
+    },
+    {
+      "id": 3,
+      "name": "type fiscal",
+      "categorieId": 1,
+      "categorieName": "fiscal"
+    },
+    {
+      "id": 5,
+      "name": "type social",
+      "categorieId": 2,
+      "categorieName": "social"
+    },
+    {
+      "id": 6,
+      "name": "type social",
+      "categorieId": 2,
+      "categorieName": "social"
+    },
+    {
+      "id": 7,
+      "name": "type juridique",
+      "categorieId": 3,
+      "categorieName": "juridique"
+    },
+    {
+      "id": 8,
+      "name": "type juridique",
+      "categorieId": 3,
+      "categorieName": "juridique"
+    },
+    {
+      "id": 9,
+      "name": "type juridique",
+      "categorieId": 3,
+      "categorieName": "juridique"
+    },
+    {
+      "name": "medical",
+      "categorieId": 4,
+      "categorieName": "sante",
+      "id": 10
+    }
+  ],
+  "theme": [
+    {
+      "id": 1,
+      "name": "theme fiscal",
+      "categorieId": 1,
+      "categorieName": "fiscal"
+    },
+    {
+      "id": 2,
+      "name": "theme fiscal",
+      "categorieId": 1,
+      "categorieName": "fiscal"
+    },
+    {
+      "id": 3,
+      "name": "theme fiscal",
+      "categorieId": 1,
+      "categorieName": "fiscal"
+    },
+    {
+      "id": 5,
+      "name": "theme social",
+      "categorieId": 2,
+      "categorieName": "social"
+    },
+    {
+      "id": 6,
+      "name": "theme social",
+      "categorieId": 2,
+      "categorieName": "social"
+    },
+    {
+      "id": 7,
+      "name": "theme juridique",
+      "categorieId": 3,
+      "categorieName": "juridique"
+    },
+    {
+      "id": 8,
+      "name": "theme juridique",
+      "categorieId": 3,
+      "categorieName": "juridique"
+    },
+    {
+      "id": 9,
+      "name": "theme juridique",
+      "categorieId": 3,
+      "categorieName": "juridique"
+    },
+    {
+      "name": "medical",
+      "categorieId": 4,
+      "categorieName": "sante",
+      "id": 10
+    }
+  ]
+}

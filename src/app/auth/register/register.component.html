@@ -1,0 +1,153 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-6">
+      <div class="card my-5">
+        <div class="card-body">
+          <div class="text-center mb-4">
+            <h1 class="h4 text-gray-900">Inscription</h1>
+          </div>
+          <form>
+            <div class="form-group mb-3">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-user" aria-hidden="true"></i></span>
+                  <input type="text" name="" class="form-control input_user"   placeholder="Nom complet">
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                  <input type="text" name="" class="form-control input_email"   placeholder="Adresse e-mail">
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-key" aria-hidden="true"></i></span>
+                  <input type="password" name="" class="form-control input_pass"  placeholder="Mot de passe">
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-key" aria-hidden="true"></i></span>
+                  <input type="password" name="" class="form-control input_pass"  placeholder="Confirmez le mot de passe">
+                </div>
+              </div>
+            </div>
+            <div class="d-xl-grid gap-2">
+            <button class="btn btn-primary mb-3 mt-3" (click)="signup()">S'inscrire</button>
+            </div>
+          </form>
+          <hr>
+          <div class="text-center">
+            <span class="text-gray-600">Ou inscrivez-vous avec:</span>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-6 mb-2">
+              <button class="btn btn-google btn-block" >
+                <i class="fab fa-google fa-fw"></i> Inscription avec Google
+              </button>
+            </div>
+            <div class="col-md-6 col-sm-6 mb-2">
+              <button class="btn btn-facebook btn-block" >
+                <i class="fab fa-facebook-f fa-fw"></i> Inscription avec Facebook
+              </button>
+            </div>
+          </div>
+          <hr>
+          <div class="text-center">
+            <span class="text-gray-600">Déjà un compte? </span><a class="small" routerLink="/login">Connectez-vous</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 
+<div class="container d-flex justify-content-center " style="margin: 100px;">
+   
+    <div class="card shadow-sm w-50 rounded overflow-hidden ">
+      <div class="card-body p-0">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-6 offset-md-3">
+            <h2 class="text-center text-primary ">Inscrivez-vous !</h2>
+
+              <form class="register-form py-5 w-120" method="get" action="login.html">
+                <div class="container">
+                  <div class="row main">
+              
+                        
+                        <div class="form-group mt-4">
+                          <label for="name" class="cols-sm-2 control-label">Nom et Prénom :</label>
+                          <div class="cols-sm-10">
+                            <div class="input-group">
+                              <span class="input-group-text"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                              <input type="text" class="form-control" name="name" id="name"  placeholder="Entrer le nom et le prénom"/>
+                            </div>
+                          </div>
+                        </div>
+                
+                        <div class="form-group mt-4">
+                          <label for="email" class="cols-sm-2 control-label">Email :</label>
+                          <div class="cols-sm-10">
+                            <div class="input-group">
+                              <span class="input-group-text"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                              <input type="text" class="form-control" name="email" id="email"  placeholder="Entrer Email"/>
+                            </div>
+                          </div>
+                        </div>
+                
+                        <div class="form-group mt-4">
+                          <label for="username" class="cols-sm-2 control-label">Admin :</label>
+                          <div class="cols-sm-10">
+                            <div class="input-group">
+                              <span class="input-group-text"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                              <input type="text" class="form-control" name="username" id="username"  placeholder="Entrer nom d'admin"/>
+                            </div>
+                          </div>
+                        </div>
+                
+                        <div class="form-group mt-4">
+                          <label for="password" class="cols-sm-2 control-label">Mot de passe :</label>
+                          <div class="cols-sm-10">
+                            <div class="input-group">
+                              <span class="input-group-text"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                              <input type="password" class="form-control" name="password" id="password"  placeholder="Enter le mot de passe"/>
+                            </div>
+                          </div>
+                        </div>
+                
+                        <div class="form-group mt-4">
+                          <label for="confirm" class="cols-sm-2 control-label">Confirmer le mot de passe :</label>
+                          <div class="cols-sm-10">
+                            <div class="input-group">
+                              <span class="input-group-text"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                              <input type="password" class="form-control input_pass" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+                            </div>
+                          </div>
+                        </div>
+                
+                        
+                      
+                  </div>
+                </div>
+              
+                <button class="btn btn-primary mb-3 mt-3 w-100" id="login" type="submit" routerLink="/login" (click)="signup()">enregistrer</button><br>
+                <small class="text-gray-500">maintenant vous avez un compte? </small>
+                <a class="text-sm text-paleBlue" routerLink="/auth">connecter</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ -->
