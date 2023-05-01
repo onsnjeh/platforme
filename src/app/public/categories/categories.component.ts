@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent {
-
+  categories!: string;
+ 
 }

@@ -31,7 +31,7 @@ export class CartesAffichantCategoriesComponent {
   
   goToCart(name: string): void {
     // this.nameColor = 'red';
-    this.router.navigate([`/cat/${name}`]);
+    this.router.navigate([`/categorie/${name}`]);
     // this.carteSelectionneeNom = this.carts.name;
    //,{ queryParams: { name: this.carts.name } }
   }

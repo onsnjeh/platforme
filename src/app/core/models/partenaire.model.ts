@@ -1,5 +1,9 @@
 export interface Partenaire {
-    id?: number ;
+    id: number ;
     nom: string ;
-    url: string;
-}
+    email: string ;
+    telephone: string ;
+    image: string ;
+    dateCreate: string ;
+  }
+  

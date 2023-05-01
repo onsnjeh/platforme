@@ -14,8 +14,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 export const PublicRoutingModule: Routes = [
     // {path:"",component:HomeComponent},
     {path:"service",component:ServiceComponent},
-    {path:'cat',component:CartesAffichantCategoriesComponent},
-    {path:"cat/:nom",component:CategoriesComponent},
+    {path:'categorie',component:CartesAffichantCategoriesComponent},
+    {path:"categorie/:nom",component:CategoriesComponent},
     {path:"recherche",component:RechercheComponent},
     {path:"aboutUs",component:AboutComponent},
     // {path:"**",component:ErrorComponent},

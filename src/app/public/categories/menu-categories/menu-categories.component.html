@@ -1,8 +1,9 @@
 <div class="d-flex flex-column m-3"> 
-<nav class="nav flex-column" *ngFor="let item of data" data-wow-delay="0.1s">
-    <a class=" btn btn-outline-warning" style="margin: 10px;" id={{item.name}} (click)="goToCart(item.name)"> <i class="{{ item.iconClass  }}"></i> {{item.name}} </a>
+<nav class="nav flex-column" *ngFor="let categories of categories"
+(click)="selectCategorie(categories.name)" data-wow-delay="0.1s">
+    <a class=" btn btn-outline-warning text-uppercase" style="margin: 10px;" id={{categories.name}} (click)="goToCart(categories.name)"> <i class="{{ categories.iconClass  }}"></i> {{categories.name}} </a>
      <!-- <a class="btn btn-outline-warning " style="margin: 10px;"  routerLink="/cat/:nom">  <i class="fa fa-balance-scale" ></i>   juridique</a>
     <a class="btn btn-outline-warning" style="margin: 10px;"  routerLink="/cat/:nom"><i class="fa fa-university"></i>  fiscal</a> -->
    
-  </nav> <a class="btn btn-outline-warning" style="margin: 10px;"  href="#"> <i class="fa fa-plus-circle "></i> autre</a> 
+  </nav> 
   </div>

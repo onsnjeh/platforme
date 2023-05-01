@@ -7,7 +7,7 @@ import {Partenaire} from 'src/app/core/models/partenaire.model'
   styleUrls: ['./partenaires.component.css']
 })
 export class PartenairesComponent {
-  data:Partenaire[] =[];
+  data!:Partenaire[];
   constructor(private dataPartenaire: PartenairesService) { }
   
   ngOnInit() {

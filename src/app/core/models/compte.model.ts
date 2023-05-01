@@ -1,8 +1,8 @@
-export class Compte {
-    id?: number ;
-    nom: string ='';
-    prenom: string ='' ;
-    email: string ='';
-    role: string ='';
-    password: string ='';
+export interface Compte {
+    id: number ;
+    nom: string ;
+    prenom: string  ;
+    email: string ;
+    role: string ;
+    password: string ;
    }

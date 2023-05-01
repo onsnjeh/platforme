@@ -9,25 +9,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  categ:string='';
-  data:Categorie[] =[];
+  data: Categorie[] = [];
+
   constructor(private dataCategorie: CategorieService, private router: Router) { }
   
   ngOnInit() {
-    this.dataCategorie.getCategorie()
-    .subscribe((allData) => {
-      this.data = allData;
-      console.log(this.data); 
-    });
+  this.dataCategorie.getCategorie().subscribe((allData) => {
+  this.data = allData;
+  });
   }
-//   update(x:string){
-// this.categ=x;
-//   this.router.navigate(['.', { parametre: this.categ }], { relativeTo: this.route });
-
-//   }
-public navigateToSection(section: string) {
+  
+  public navigateToSection(sectionId: string) {
   this.router.navigate(["/"]);
   window.location.hash = '';
-  window.location.hash = section;
-}
+  window.location.hash = sectionId;
+  }
+
 }

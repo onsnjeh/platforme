@@ -7,7 +7,7 @@ import { CompteService } from 'src/app/core/services/compte/compte.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  id?: number ;
+  id: number=0 ;
   nom: string ='';
   prenom: string ='' ;
   email: string ='';

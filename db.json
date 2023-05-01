@@ -414,7 +414,6 @@
       "children": []
     }
   ],
-  
   "offre": [
     {
       "id": 1,
@@ -491,29 +490,37 @@
       "message": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit."
     }
   ],
+ 
   "partenaires": [
     {
       "id": 1,
       "nom": "zitouna",
-      "url": "assets/img/team-1.jpg"
+      "email": "zitouna@gmail.com",
+      "telephone": "784512963",
+      "image": "team-1.jpg"
     },
     {
       "id": 2,
       "nom": "TT",
-      "url": "assets/img/team-2.jpg"
+      "email": "TT@gmail.com",
+      "telephone": "987456321",
+      "image": "team-2.jpg"
     },
     {
       "id": 3,
       "nom": "AA",
-      "url": "assets/img/team-3.jpg"
+      "email": "AA@gmail.com",
+      "telephone": "14258369",
+      "image": "team-3.jpg"
     },
     {
       "id": 4,
       "nom": "SS",
-      "url": "assets/img/team-4.jpg"
+      "email": "SS@gmail.com",
+      "telephone": "753428691",
+      "image": "team-4.jpg"
     }
   ],
- 
   "categorie": [
     {
       "id": "1",
@@ -532,11 +539,6 @@
       "name": "juridique",
       "iconClass": "fa fa-balance-scale",
       "nombre": "2"
-    },
-    {
-      "id": "4",
-      "name": "autres",
-      "iconClass": "fa fa-plus-circle"
     }
   ],
   "type": [
