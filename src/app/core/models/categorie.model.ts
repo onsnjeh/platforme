@@ -1,8 +1,21 @@
 export interface Categorie {
-    id: string;
-    name: string;
-    description: string;
-    iconClass: string;
-   
-  }
-  
+  id: number;
+  name: string ;
+  description: string;
+  iconClass:string;
+  dateCreate?: Date; 
+}
+
+export interface Type {
+  id: number;
+  name: string ;
+  categorieId?: number;
+  categorieName?: string;
+}
+
+export interface Theme {
+  id: number;
+  name: string ;
+  categorieId?: number;
+  categorieName?: string;
+}

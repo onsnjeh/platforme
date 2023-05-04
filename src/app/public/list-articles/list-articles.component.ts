@@ -14,39 +14,15 @@ export class ListArticlesComponent implements OnInit{
  
  
  
-  articles: Article[] = []; // Les Articles affichés
+  @Input() articles!: Article[];
   page = 1; // La page courante
   pageSize = 5; // Nombre de Articles par page
 
   constructor(private ArticleService: ArticleService) { }
   @Input() categories!: string;
 
-  ngOnInit() {
-    this.getArticles();
+  ngOnInit(): void {
   }
-
-  ngOnChanges() {
-    this.getArticles();
-  }
-
-  getArticles() {
-    if (this.categories) {
-      this.ArticleService.getArticlesByCategorie(this.categories)
-        .subscribe(articles => this.articles = articles);
-    } else {
-      this.ArticleService.getArticles()
-        .subscribe(articles => this.articles = articles);
-    }
-  }
-
-
-
-  // Charge les Articles depuis le serveur
-  // loadTags() {
-  //   this.ArticleService.getTags() .subscribe(tags => {
-  //     this.tags = tags;
-  //   });
-  // }
 
 
   // Retourne les Articles à afficher pour la page courante

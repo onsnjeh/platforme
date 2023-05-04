@@ -4,14 +4,14 @@
 <!-- list -->
 <div class="d-flex flex-column m-3" routerLink="/auth" > 
           <div 
-              *ngFor="let data of articles | paginate: { itemsPerPage: pageSize, currentPage: page }">
+          *ngFor="let articles of articles | paginate: { itemsPerPage: pageSize, currentPage: page }">
               <div class="card m-3 fact-item bg-light rounded">
                   <div class="card-body">
-                    <h5 class="card-title">{{ data.titre }}</h5>
-                    <p class="card-text">{{ data.abstract }}</p>
+                    <h5 class="card-title">{{ articles.titre }}</h5>
+                    <p class="card-text">{{ articles.abstract }}</p>
                     <div class="row">
-                      <div class="col-6">Référence: {{data.reference}}</div>
-                      <div class="col-6">Publié le: {{data.date_publication}}</div>
+                      <div class="col-6">Référence: {{articles.reference}}</div>
+                      <div class="col-6">Publié le: {{articles.date_publication}}</div>
                     </div>
                   
               </div>
@@ -26,27 +26,27 @@
   <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>
 
-<!-- <h2>{{data.titre}}</h2>
+<!-- <h2>{{articles.titre}}</h2>
         <div class="row">
           <div class="col-8">
-            <p>{{data.abstract}}</p>
+            <p>{{articles.abstract}}</p>
             <div class="row">
-              <div class="col-6">Référence: {{data.ref}}</div>
-              <div class="col-6">Publié le: {{data.date_publication}}</div>
-   *ngFor="let data of articles | paginate: { itemsPerPage: pageSize, currentPage: page }" -->
+              <div class="col-6">Référence: {{articles.ref}}</div>
+              <div class="col-6">Publié le: {{articles.date_publication}}</div>
+   *ngFor="let articles of articles | paginate: { itemsPerPage: pageSize, currentPage: page }" -->
 
 
 
    <!--  <div class="row">
       <div class="col-6 col-sm-3"  
-      *ngFor="let data of articles | paginate: { itemsPerPage: pageSize, currentPage: page }">
+      *ngFor="let articles of articles | paginate: { itemsPerPage: pageSize, currentPage: page }">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">{{ data.titre }}</h5>
-            <p class="card-text">{{ data.abstract }}</p>
+            <h5 class="card-title">{{ articles.titre }}</h5>
+            <p class="card-text">{{ articles.abstract }}</p>
             <div class="row">
-              <div class="col-6">Référence: {{data.ref}}</div>
-              <div class="col-6">Publié le: {{data.date_publication}}</div>
+              <div class="col-6">Référence: {{articles.ref}}</div>
+              <div class="col-6">Publié le: {{articles.date_publication}}</div>
             </div>
           </div>
         </div>

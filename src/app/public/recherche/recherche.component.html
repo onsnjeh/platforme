@@ -1,73 +1,67 @@
-    <div class="row">
-        <div class="card container-xxl mt-4 col-4 col-md-4">
-            <div class="text-center text-uppercase col-12 bg-light mb-2">
-                <h2>Recherche avancée</h2>
+<div class="row g-3 my-2 py-2">
+    <div class="card container mt-3 col-md-5">
+        <div class="text-center text-uppercase col-12 bg-light mb-2">
+            <h2>Recherche avancée</h2>
+        </div>
+        <br>
+            <form (submit)="rechercheArticle()">
+                <div class="row g-3">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-check form-check-inline mb-3">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Roundtrip"
+                                value="doc-vigeur">
+                            <label class="form-check-label" for="documents en vigueur">Documents en vigueur</label>
 
-            </div>
-            <div class="row g-4">
-                <form [formGroup]="recherche" (ngSubmit)="onSubmit()">
-                    <div class="row g-3">
-
-                        <div class="col-12 mb-4">
                         </div>
-                        <div class="col-12">
-                            <div class="form-check form-check-inline mb-3">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Roundtrip"
-                                    value="doc-vigeur">
-                                <label class="form-check-label" for="documents en vigueur">Documents en vigueur</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Oneway"
+                                value="doc-aborge">
+                            <label class="form-check-label" for="documents abrogés">Documents abrogés</label>
+                        </div>
 
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Oneway"
-                                    value="doc-aborge">
-                                <label class="form-check-label" for="documents abrogés">Documents abrogés</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="MultiCity"
-                                    value="option3">
-                                <label class="form-check-label" for="tous les documents">Tous les documents</label>
-
-                            </div>
-
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label class="form-label" for="motsCles">Mots clés :</label>
+                            <input type="text" placeholder="Rechercher par mot clé..." class="form-control"
+                            [(ngModel)]="recherche" name="recherche">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label class="form-label" for="categories">Catégories :</label>
+                            <select (change)="onCategorieChange()" class="form-select" name="categories"
+                                [(ngModel)]="selectedCategorieName" id="categorie">
+                                <option value="">Sélectionner un catégorie</option>
+                                <option *ngFor="let categorie of categories" [value]="categorie.name">{{categorie.name}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                
+                        <div class="col-lg-6 col-md-12">
+                            <label>Type :</label>
+                            <select class="form-select" name="types" [(ngModel)]="selectedTypeName" id="type">
+                                <option value="">Sélectionner un type</option>
+                                <option *ngFor="let type of types" [value]="type.name">{{type.name}}</option>
+                            </select>
                         </div>
                         <div class="col-lg-6 col-md-12">
-                            <div class="form-group">
-                                <label class="form-label" for="motsCles">Mots clés :</label>
-                                <input type="text" placeholder="Rechercher par mot clé..." class="form-control"
-                                    formControlName="motsCles">
-                            </div>
+                            <label>Thème :</label>
+                            <select class="form-select" name="themes" [(ngModel)]="selectedThemeName" id="theme">
+                                <option value="">Sélectionner un thème</option>
+                                <option *ngFor="let theme of themes" [value]="theme.name">{{theme.name}}</option>
+                            </select>
                         </div>
-                        <div class="col-lg-6 col-md-12">
-                            <div class="form-group">
-                                <label class="form-label" for="categories">Catégories :</label>
-                                <select class="form-select">
-                                            <option value="">Sélectionner un catégorie</option>
-                                    <option value="1">Juridique</option>
-                                    <option value="2">Sociale</option>
-                                    <option value="3">Fiscale</option>
-                                    <option value="4">Autre</option>
-                                </select>
-                            </div>
+                 
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label class="form-label" for="date">Date :</label>
+                            <input type="text" class="form-control"[(ngModel)]="date_publication" name="date_publication"placeholder="Rechercher par date publication">
                         </div>
-                        <div class="col-lg-6 col-md-12">
-                            <div class="form-group">
-                                <label class="form-label" for="date">Date :</label>
-                                <input type="date" class="form-control" formControlName="date">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                            <div class="form-group">
-                                <label class="form-label" for="natureTexte">Nature de texte :</label>
-                                <select class="form-select">
-                                    <option selected="" hidden="">Tous...</option>
-                                    <option value="1">Loi</option>
-                                    <option value="2">Guide</option>
-                                    <option value="3">Douane</option>
-                                </select>
-                            </div>
-                        </div>
-                        <!--  Accordéon -->
-                        <div class="accordion" id="accordionExample">
+                    </div>
+                    <!--  Accordéon -->
+                    <!-- <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -106,23 +100,18 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="col-12 mt-4">
-                            <button class="btn btn-primary text-uppercase" type="submit"><i class="fa fa-search-plus"
-                                    aria-hidden="true"></i> Rechercher</button>
-                        </div>
-
-
-
-
+                    <div class="col-12 mt-4">
+                        <button class="btn btn-primary text-uppercase" type="submit" >
+                            Rechercher</button>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
 
-        </div>
+    </div>
 
-        <div class="card  container mt-4  col-5 col-md-7">
-            contenu à afficher
-            <app-list-articles></app-list-articles>
-        </div>
+    <div class="card container mt-3 col-md-6">
+        contenu à afficher
+        <app-list-articles *ngIf="articles" [articles]="articles" #listeArticles></app-list-articles>
+    </div>

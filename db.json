@@ -1,5 +1,4 @@
 {
-  
   "compte": [
     {
       "id": 1,
@@ -159,8 +158,8 @@
         4
       ],
       "categorie": "juridique",
-      "type": "juridique",
-      "theme": "juridique"
+      "type": "type juridique",
+      "theme": "theme juridique"
     },
     {
       "id": 2,
@@ -173,9 +172,9 @@
         2,
         4
       ],
-      "categorie": "juridique",
-      "type": "juridique",
-      "theme": "juridique"
+    "categorie": "juridique",
+      "type": "type juridique",
+      "theme": "theme juridique"
     },
     {
       "id": 3,
@@ -188,8 +187,8 @@
         3
       ],
       "categorie": "social",
-      "type": "social",
-      "theme": "social"
+      "type": "type social",
+      "theme": "theme social"
     },
     {
       "id": 4,
@@ -201,8 +200,8 @@
         4
       ],
       "categorie": "fiscal",
-      "type": "fiscal",
-      "theme": "fiscal"
+      "type": "type fiscal",
+      "theme": "theme fiscal"
     },
     {
       "id": 5,
@@ -213,9 +212,9 @@
       "tags": [
         2
       ],
-      "categorie": "juridique",
-      "type": "juridique",
-      "theme": "juridique"
+    "categorie": "juridique",
+      "type": "type juridique1",
+      "theme": "theme juridique1"
     },
     {
       "id": 6,
@@ -226,9 +225,9 @@
       "tags": [
         1
       ],
-      "categorie": "juridique",
-      "type": "juridique",
-      "theme": "juridique"
+    "categorie": "juridique2",
+      "type": "type juridique2",
+      "theme": "theme juridique2"
     },
     {
       "id": 7,
@@ -239,9 +238,9 @@
       "tags": [
         3
       ],
-      "categorie": "juridique",
-      "type": "juridique",
-      "theme": "juridique"
+    "categorie": "juridique",
+      "type": "type juridique",
+      "theme": "theme juridique"
     },
     {
       "id": 8,
@@ -254,9 +253,9 @@
         3,
         4
       ],
-      "categorie": "juridique",
-      "type": "juridique",
-      "theme": "juridique"
+    "categorie": "juridique",
+      "type": "type juridique",
+      "theme": "theme juridique"
     },
     {
       "id": 9,
@@ -287,14 +286,14 @@
     },
     {
       "id": 11,
-      "titre": "test 2023",
+      "titre": "test2023",
       "reference": 2323,
       "date_publication": "2023-12-22",
       "abstract": "test 2023",
-      "tags": "test 2023",
+      "tags": "testtags 2023",
       "categorie": "social",
-      "type": "social",
-      "theme": "social",
+      "type": "type social1",
+      "theme": "theme social1",
       "textFichier": "test 2023",
       "fichier": "C:\\fakepath\\chapitre 3.odt",
       "date": "2023-04-27T21:51:29.097Z"
@@ -490,7 +489,6 @@
       "message": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit."
     }
   ],
- 
   "partenaires": [
     {
       "id": 1,
@@ -523,34 +521,40 @@
   ],
   "categorie": [
     {
-      "id": "1",
+      "id": 1,
       "name": "fiscal",
-      "iconClass": "fa fa-university",
-      "nombre": "6"
+      "description": "Description de Fiscal",
+      "iconClass": "fa fa-university"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "social",
-      "iconClass": "fa fa-users",
-      "nombre": "10"
+      "description": "Description de Social",
+      "iconClass": "fa fa-users"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "juridique",
-      "iconClass": "fa fa-balance-scale",
-      "nombre": "2"
+      "description": "Description de Juridique",
+      "iconClass": "fa fa-balance-scale"
+    },
+    {
+      "id": 4,
+      "dateCreate": "2023-04-24T13:02:53.689Z",
+      "name": "sante",
+      "description": "description de sante"
     }
   ],
   "type": [
     {
       "id": 1,
-      "name": "type fiscal",
+      "name": "type fiscal1",
       "categorieId": 1,
       "categorieName": "fiscal"
     },
     {
       "id": 2,
-      "name": "type fiscal",
+      "name": "type fiscal2",
       "categorieId": 1,
       "categorieName": "fiscal"
     },
@@ -562,25 +566,25 @@
     },
     {
       "id": 5,
-      "name": "type social",
+      "name": "type social2",
       "categorieId": 2,
       "categorieName": "social"
     },
     {
       "id": 6,
-      "name": "type social",
+      "name": "type social1",
       "categorieId": 2,
       "categorieName": "social"
     },
     {
       "id": 7,
-      "name": "type juridique",
+      "name": "type juridique1",
       "categorieId": 3,
       "categorieName": "juridique"
     },
     {
       "id": 8,
-      "name": "type juridique",
+      "name": "type juridique1",
       "categorieId": 3,
       "categorieName": "juridique"
     },
@@ -600,13 +604,13 @@
   "theme": [
     {
       "id": 1,
-      "name": "theme fiscal",
+      "name": "theme fiscal1",
       "categorieId": 1,
       "categorieName": "fiscal"
     },
     {
       "id": 2,
-      "name": "theme fiscal",
+      "name": "theme fiscal2",
       "categorieId": 1,
       "categorieName": "fiscal"
     },
@@ -618,25 +622,25 @@
     },
     {
       "id": 5,
-      "name": "theme social",
+      "name": "theme social1",
       "categorieId": 2,
       "categorieName": "social"
     },
     {
       "id": 6,
-      "name": "theme social",
+      "name": "theme social2",
       "categorieId": 2,
       "categorieName": "social"
     },
     {
       "id": 7,
-      "name": "theme juridique",
+      "name": "theme juridique1",
       "categorieId": 3,
       "categorieName": "juridique"
     },
     {
       "id": 8,
-      "name": "theme juridique",
+      "name": "theme juridique2",
       "categorieId": 3,
       "categorieName": "juridique"
     },

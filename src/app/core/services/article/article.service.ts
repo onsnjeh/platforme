@@ -29,21 +29,30 @@ getArticles(): Observable<Article[]> {
     return this.http.get<Article>(`${this.baseUrl}/${id}`);
   }
 
-  // Crée un nouveau Article
-  // create(article: Article): Observable<Article> {
-  //   return this.http.post<Article>(`${this.baseUrl}`, article);
-  // }
+  searchArticles(recherche:string,categorie:string,type:string,theme:string,date_publication:string)
+  {
+    let url = `${this.baseUrl}?`;
+    if (recherche) {
+      url += `q=${recherche}&`;
+    }
+    if (categorie) {
+      url += `categorie=${categorie}&type=${type}&theme=${theme}&`;
+    }
+    if (date_publication) {
+      url += `date_publication=${date_publication}&`;
+    }
+   return this.http.get<Article[]>(url)
+  }
+  // Récupère un Article par son categorie , type et theme
+//   getArticlesByCategorieTypeAndTheme(categorie: string, type: string, theme: string): Observable<Article[]> {
+//     const query = `?categorie=${categorie}&type=${type}&theme=${theme}`;
+//    return this.http.get<Article[]>(`${this.baseUrl}${query}`)
+// }
 
-  // // Met à jour un Article existant
-  // update(id: number, article: Article): Observable<Article> {
-  //   return this.http.put<Article>(`${this.baseUrl}/${id}`, article);
-  // }
-
-  // // Supprime un Article existant
-  // delete(id: number): Observable<Article> {
-  //   return this.http.delete<Article>(`${this.baseUrl}/${id}`);
-  // }
-
+// searchArticles(keyword: string): Observable<Article[]> {
+//   const searchUrl = `${this.baseUrl}?q=${keyword}`;
+//   return this.http.get<Article[]>(searchUrl);
+// }
 
 }
 
