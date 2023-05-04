@@ -13,7 +13,6 @@ import { ArticleService } from 'src/app/core/services/article/article.service';
 export class ListArticlesComponent implements OnInit{
  
  
- 
   @Input() articles!: Article[];
   page = 1; // La page courante
   pageSize = 5; // Nombre de Articles par page
@@ -22,9 +21,21 @@ export class ListArticlesComponent implements OnInit{
   @Input() categories!: string;
 
   ngOnInit(): void {
+   this.getArticles()
   }
+  ngOnChanges() {
+    this.getArticles();
+  }
+  getArticles() {
+    if (this.categories) {
+      this.ArticleService.getArticlesByCategorie(this.categories)
+        .subscribe(articles => this.articles = articles);
+    } else {
+      this.ArticleService.getArticles()
+        .subscribe(articles => this.articles = articles);
+    }
 
-
+  }
   // Retourne les Articles à afficher pour la page courante
   get ArticlesToShow(): Article[] {
     const startIndex = (this.page - 1) * this.pageSize;
