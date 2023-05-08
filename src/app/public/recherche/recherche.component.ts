@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Article } from 'src/app/core/models/article.model';
 import { Categorie, Theme, Type } from 'src/app/core/models/categorie.model';
-import { ArticleService } from 'src/app/core/services/article/article.service';
-import { CategorieService } from 'src/app/core/services/categorie/categorie.service';
+import { ArticleService } from 'src/app/core/services/article.service';
+import { CategorieService } from 'src/app/core/services/categorie.service';
+
 @Component({
   selector: 'app-recherche',
   templateUrl: './recherche.component.html',
@@ -24,7 +25,7 @@ export class RechercheComponent  {
     private http:HttpClient) { }
 
   ngOnInit() {
-    this.categorieService.getCategorie().subscribe(categorie => {
+    this.categorieService.getCategories().subscribe(categorie => {
       this.categories = categorie;
     });
     this.articleService.getArticles().subscribe(articles => this.articles = articles);
@@ -46,7 +47,7 @@ export class RechercheComponent  {
   recherche: string = '';
 
   rechercheArticle() {
-  this.articleService.searchArticles(this.recherche,
+  this.articleService.searchArticle(this.recherche,
     this.selectedCategorieName,this.selectedTypeName,this.selectedThemeName,
     this.date_publication).subscribe((data: Article[]) => {
       this.articles = data;

@@ -1,32 +1,25 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { FooterComponent } from './core/layouts/footer/footer.component';
-import { NavbarComponent } from './core/layouts/navbar/navbar.component';
-import { TopbarComponent } from './core/layouts/topbar/topbar.component';
-import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
-import { PanelMenuModule } from 'primeng/panelmenu';
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgbPaginationModule, NgbTypeaheadModule, NgbCollapseModule, NgbAccordionModule, NgbCarouselModule, NgbDropdownModule } from "@ng-bootstrap/ng-bootstrap";
+import {  CarouselModule } from "angular-bootstrap-md";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { AuthModule } from "./auth/auth.module";
+import { FooterComponent } from "./core/layouts/footer/footer.component";
+import { TopbarComponent } from "./core/layouts/topbar/topbar.component";
+import { PublicModule } from "./public/public.module";
+import { NavbarComponent } from "./core/layouts/navbar/navbar.component";
 
-import { FormsModule } from '@angular/forms';
-import { NgbPaginationModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { CarouselModule } from 'ngx-owl-carousel-o';
-import { PublicModule } from './public/public.module';
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
-import { AuthModule } from './auth/auth.module';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    NavbarComponent,
       TopbarComponent,
-   
-          TopbarComponent,
-    
+      NavbarComponent,
    
     
   ],
@@ -37,12 +30,13 @@ import { AuthModule } from './auth/auth.module';
     FormsModule,
     NgbPaginationModule,
     NgbTypeaheadModule,
-    
     AuthModule,
     NgbCollapseModule,NgbAccordionModule,NgbCarouselModule,
-    PanelMenuModule, PublicModule,
+    PublicModule,
     NgbDropdownModule,
     CarouselModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
     
   ],
   providers: [],

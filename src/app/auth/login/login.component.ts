@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { Router } from '@angular/router';
-import { CompteService } from 'src/app/core/services/compte/compte.service';
+import { CompteService } from 'src/app/core/services/compte.service';
 
 @Component({
   selector: 'app-login',
@@ -14,14 +14,16 @@ export class LoginComponent {
   constructor(private router: Router, private compteService: CompteService) {}
 
   login() {
-    this.compteService.getByEmail(this.email).subscribe(users => {
-      if (users.length > 0 && users[0].password === this.password) {
-        localStorage.setItem('currentUser', JSON.stringify(users[0]));
-        this.router.navigate(['/']);
-      } else {
-        alert('Invalid email or password');
-      }
-    });
+    window.location.href = 'http://localhost:63546/';
+
+    // this.compteService.getByEmail(this.email).subscribe(users => {
+    //   if (users.length > 0 && users[0].password === this.password) {
+    //     localStorage.setItem('currentUser', JSON.stringify(users[0]));
+    //     this.router.navigate(['/']);
+    //   } else {
+    //     alert('Invalid email or password');
+    //   }
+    // });
   }
 
 

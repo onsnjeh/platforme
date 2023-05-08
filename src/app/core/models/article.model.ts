@@ -8,6 +8,7 @@ export interface Tag {
   expanded?: boolean;
 }
 export interface  Article {
+
   id: number;
   titre: string ;
   reference: number ;
@@ -20,4 +21,6 @@ export interface  Article {
   theme: string;
   fichier: string ;
   textFichier: string ;
+
+
 }

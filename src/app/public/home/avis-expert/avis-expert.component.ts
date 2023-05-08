@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {UtilisateurService} from 'src/app/core/services/utilisateur/utilisateur.service';
-import {Utilisateur} from 'src/app/core/models/utilisateur.model'
+import { Utilisateur } from 'src/app/core/models/utilisateur.model';
+import { UtilisateurService } from 'src/app/core/services/utilisateur.service';
+
 @Component({
   selector: 'app-avis-expert',
   templateUrl: './avis-expert.component.html',

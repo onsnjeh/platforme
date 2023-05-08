@@ -1,8 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {CategorieService} from 'src/app/core/services/categorie/categorie.service';
 import {Categorie} from 'src/app/core/models/categorie.model';
 import { Router } from '@angular/router';
+import { CategorieService } from 'src/app/core/services/categorie.service';
 @Component({
   selector: 'app-menu-categories',
   templateUrl: './menu-categories.component.html',
@@ -15,7 +15,7 @@ export class MenuCategoriesComponent implements OnInit{
   constructor(private categorieService: CategorieService , private router : Router) { }
 
   ngOnInit() {
-    this.categorieService.getCategorie().subscribe(categories => {
+    this.categorieService.getCategories().subscribe(categories => {
       this.categories = categories;
     });
   }

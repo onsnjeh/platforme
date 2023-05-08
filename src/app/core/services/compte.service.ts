@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Compte } from '../../models/compte.model';
-//import firebase from 'firebase/app';
+import { Compte } from '../models/compte.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +12,7 @@ export class CompteService {
   constructor(private http: HttpClient) { }
 
   getItemsByRole(role: string): Observable<Compte[]> {
-    return this.http.get<Compte[]>(`http://localhost:3000/compte?role=${role}`);
+    return this.http.get<Compte[]>(`${this.baseUrl}?role=${role}`);
   }
     
   // Récupère tous les Comptes
@@ -40,26 +39,30 @@ export class CompteService {
   delete(id: number): Observable<Compte> {
     return this.http.delete<Compte>(`${this.baseUrl}/${id}`);
   }
- // Récupère un Compte par son email
- getByEmail(email: string): Observable<any> {
-  return this.http.get(`${this.baseUrl}?email=${email}`);
-}
-// constructor(
-//   private afAuth: AngularFireAuth
-// ) {}
 
-// loginWithEmail(email: string, password: string) {
-//   return this.afAuth.signInWithEmailAndPassword(email, password);
-// }
 
-// loginWithGoogle() {
-//   const provider = new firebase.auth.GoogleAuthProvider();
-//   return this.afAuth.signInWithPopup(provider);
-// }
 
-// loginWithFacebook() {
-//   const provider = new firebase.auth.FacebookAuthProvider();
-//   return this.afAuth.signInWithPopup(provider);
-// }
+  getProfil(nom:string){
+    return this.http.get< Compte>(`${this.baseUrl}?role=${nom}`);
+
+  }
+
+  
+  chercherCompte(variable: string): Promise<string> {
+    return this.http.get<Compte>(this.baseUrl).toPromise()
+      .then((data: any) => {
+        const obj = data.find((item: any) => item.role === variable);
+        return obj ? obj.nom : null;
+      })
+      .catch((err: any) => {
+        console.error(err);
+        return null;
+      });
+  }
+
+  searchComptes(searchTerm: string, role: string): Observable<Compte[]> {
+    return this.http.get<Compte[]>(`${this.baseUrl}?role=${role}&q=${searchTerm}`);
+  }
+  
 }
 

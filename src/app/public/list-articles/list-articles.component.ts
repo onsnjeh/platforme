@@ -1,8 +1,8 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { Article, Tag } from 'src/app/core/models/article.model';
-import { ArticleService } from 'src/app/core/services/article/article.service';
+import { ArticleService } from 'src/app/core/services/article.service';
 
 
 @Component({
@@ -10,32 +10,36 @@ import { ArticleService } from 'src/app/core/services/article/article.service';
   templateUrl: './list-articles.component.html',
   styleUrls: ['./list-articles.component.css']
 })
-export class ListArticlesComponent implements OnInit{
- 
+export class ListArticlesComponent {
  
   @Input() articles!: Article[];
+  @Input() categories!: string;
+
   page = 1; // La page courante
   pageSize = 5; // Nombre de Articles par page
 
-  constructor(private ArticleService: ArticleService) { }
-  @Input() categories!: string;
+  constructor(private articleService: ArticleService) { }
 
-  ngOnInit(): void {
-   this.getArticles()
+  ngOnInit() {
+    this.getArticle();
   }
-  ngOnChanges() {
-    this.getArticles();
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['categories'] && !changes['categories'].firstChange) {
+      this.getArticle();
+    }
   }
-  getArticles() {
+
+  getArticle() {
     if (this.categories) {
-      this.ArticleService.getArticlesByCategorie(this.categories)
+      this.articleService.getArticlesByCategorie(this.categories)
         .subscribe(articles => this.articles = articles);
     } else {
-      this.ArticleService.getArticles()
+      this.articleService.getArticles()
         .subscribe(articles => this.articles = articles);
     }
-
   }
+
   // Retourne les Articles à afficher pour la page courante
   get ArticlesToShow(): Article[] {
     const startIndex = (this.page - 1) * this.pageSize;

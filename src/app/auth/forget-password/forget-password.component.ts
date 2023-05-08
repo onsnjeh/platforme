@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { CompteService } from 'src/app/core/services/compte/compte.service';
+import { CompteService } from 'src/app/core/services/compte.service';
 
 @Component({
   selector: 'app-forget-password',
@@ -14,17 +14,17 @@ export class ForgetPasswordComponent {
   constructor(private router: Router, private compteService: CompteService) {}
 
   resetPassword() {
-    this.compteService.getByEmail(this.email).subscribe(users => {
-      if (users.length > 0) {
-        const user = users[0];
-        user.password = this.newPassword;
-        this.compteService.update(user.id, user).subscribe(() => {
-          this.router.navigate(['/login']);
-        });
-      } else {
-        alert('Invalid email');
-      }
-    });
+    // this.compteService.getByEmail(this.email).subscribe(users => {
+    //   if (users.length > 0) {
+    //     const user = users[0];
+    //     user.password = this.newPassword;
+    //     this.compteService.update(user.id, user).subscribe(() => {
+    //       this.router.navigate(['/login']);
+    //     });
+    //   } else {
+    //     alert('Invalid email');
+    //   }
+    // });
   }
   
 

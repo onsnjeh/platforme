@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Categorie } from 'src/app/core/models/categorie.model';
-import { CategorieService } from 'src/app/core/services/categorie/categorie.service';
 import { Router } from '@angular/router';
+import { CategorieService } from '../../services/categorie.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +14,7 @@ export class NavbarComponent {
   constructor(private dataCategorie: CategorieService, private router: Router) { }
   
   ngOnInit() {
-  this.dataCategorie.getCategorie().subscribe((allData) => {
+  this.dataCategorie.getCategories().subscribe((allData) => {
   this.data = allData;
   });
   }

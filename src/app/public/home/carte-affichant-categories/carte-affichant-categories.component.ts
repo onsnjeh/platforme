@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import {CategorieService} from 'src/app/core/services/categorie/categorie.service';
-import {Categorie} from 'src/app/core/models/categorie.model';
-import { Router } from '@angular/router';
-import { Article } from 'src/app/core/models/article.model';
-import { ArticleService } from 'src/app/core/services/article/article.service';
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+import { Article } from "src/app/core/models/article.model";
+import { Categorie } from "src/app/core/models/categorie.model";
+import { ArticleService } from "src/app/core/services/article.service";
+import { CategorieService } from "src/app/core/services/categorie.service";
+
 @Component({
   selector: 'app-carte-affichant-categories',
   templateUrl: './carte-affichant-categories.component.html',

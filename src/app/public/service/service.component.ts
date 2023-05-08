@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { Offre } from "src/app/core/models/offre.model";
-import { OffreService } from "src/app/core/services/offre/offre.service";
+import { OffreService } from "src/app/core/services/offre.service";
 
 
 

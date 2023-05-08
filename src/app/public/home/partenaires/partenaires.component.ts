@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {PartenairesService} from 'src/app/core/services/partenaires/partenaires.service';
 import {Partenaire} from 'src/app/core/models/partenaire.model'
+import { PartenairesService } from 'src/app/core/services/partenaires.service';
 @Component({
   selector: 'app-partenaires',
   templateUrl: './partenaires.component.html',

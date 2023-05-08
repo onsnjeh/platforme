@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { CompteService } from 'src/app/core/services/compte/compte.service';
+import { CompteService } from 'src/app/core/services/compte.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

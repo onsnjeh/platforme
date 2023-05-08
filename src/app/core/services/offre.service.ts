@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Offre } from '../../models/offre.model';
+import { Offre } from '../models/offre.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -42,4 +42,9 @@ export class OffreService {
     const url = `${this.baseUrl}?titre=${titre}`;
     return this.http.get<Offre>(url);
   }
+
+  searchOffres(searchTerm: string): Observable<Offre[]> {
+    return this.http.get<Offre[]>(`${this.baseUrl}?q=${searchTerm}`);
+  }
+
 }
