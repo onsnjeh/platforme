@@ -25,25 +25,30 @@ export class CompteService {
     return this.http.get<Compte>(`${this.baseUrl}/${id}`);
   }
 
-  // Crée un nouveau Compte
-  create(compte: Compte): Observable<Compte> {
-    return this.http.post<Compte>(`${this.baseUrl}`, compte);
+  
+  register(Compte: Compte) {
+    return this.http.post<Compte>(`${this.baseUrl}`, Compte);
   }
 
-  // Met à jour un Compte existant
-  update(id: number, compte: Compte): Observable<Compte> {
-    return this.http.put<Compte>(`${this.baseUrl}/${id}`, compte);
+  login(email: string, password: string) {
+    return this.http.get<Compte[]>(`${this.baseUrl}?email=${email}&password=${password}`);
   }
 
-  // Supprime un Compte existant
-  delete(id: number): Observable<Compte> {
-    return this.http.delete<Compte>(`${this.baseUrl}/${id}`);
+  setCurrentCompte(Compte: Compte) {
+    localStorage.setItem('currentCompte', JSON.stringify(Compte));
   }
 
+  getCurrentCompte() {
+    return JSON.parse(localStorage.getItem('currentCompte') || '{}');
+  }
+
+  logout() {
+    localStorage.removeItem('currentCompte');
+  }
 
 
   getProfil(nom:string){
-    return this.http.get< Compte>(`${this.baseUrl}?role=${nom}`);
+    return this.http.get<Compte>(`${this.baseUrl}?role=${nom}`);
 
   }
 

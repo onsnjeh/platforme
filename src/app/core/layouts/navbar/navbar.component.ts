@@ -24,5 +24,6 @@ export class NavbarComponent {
   window.location.hash = '';
   window.location.hash = sectionId;
   }
+ 
 
 }

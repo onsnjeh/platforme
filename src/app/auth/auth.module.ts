@@ -5,7 +5,7 @@ import {RouterModule} from '@angular/router'
 import { AuthRoutingModule } from './auth.routing';
 // import { NgxPaginationModule } from 'ngx-pagination';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -22,6 +22,7 @@ ResetPasswordComponent
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild(AuthRoutingModule),
   ]
 })

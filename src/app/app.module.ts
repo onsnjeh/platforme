@@ -7,11 +7,11 @@ import { NgbPaginationModule, NgbTypeaheadModule, NgbCollapseModule, NgbAccordio
 import {  CarouselModule } from "angular-bootstrap-md";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { AuthModule } from "./auth/auth.module";
 import { FooterComponent } from "./core/layouts/footer/footer.component";
 import { TopbarComponent } from "./core/layouts/topbar/topbar.component";
 import { PublicModule } from "./public/public.module";
 import { NavbarComponent } from "./core/layouts/navbar/navbar.component";
+import { AuthModule } from "./auth/auth.module";
 
 
 @NgModule({
@@ -30,12 +30,12 @@ import { NavbarComponent } from "./core/layouts/navbar/navbar.component";
     FormsModule,
     NgbPaginationModule,
     NgbTypeaheadModule,
-    AuthModule,
     NgbCollapseModule,NgbAccordionModule,NgbCarouselModule,
     PublicModule,
     NgbDropdownModule,
     CarouselModule,
     AppRoutingModule,
+    AuthModule,
     BrowserAnimationsModule,
     
   ],

@@ -1,5 +1,7 @@
 import { Component} from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Compte } from 'src/app/core/models/compte.model';
 import { CompteService } from 'src/app/core/services/compte.service';
 
 @Component({
@@ -8,53 +10,33 @@ import { CompteService } from 'src/app/core/services/compte.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  email: string = '';
-  password: string = '';
+ 
 
-  constructor(private router: Router, private compteService: CompteService) {}
+  loginForm!: FormGroup;
 
-  login() {
-    window.location.href = 'http://localhost:63546/';
+  constructor(private fb: FormBuilder, private router: Router, private authService: CompteService) { }
 
-    // this.compteService.getByEmail(this.email).subscribe(users => {
-    //   if (users.length > 0 && users[0].password === this.password) {
-    //     localStorage.setItem('currentUser', JSON.stringify(users[0]));
-    //     this.router.navigate(['/']);
-    //   } else {
-    //     alert('Invalid email or password');
-    //   }
-    // });
+  ngOnInit() {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    });
   }
 
+  onSubmit() {
+    const email = this.loginForm.value.email;
+    const password = this.loginForm.value.password;
+    this.authService.login(email, password).subscribe((Comptes: Compte[]) => {
+      if (Comptes.length > 0) {
+        const currentCompte = Comptes[0];
+        this.authService.setCurrentCompte(currentCompte);
+        window.location.href = 'http://localhost:63546/';
 
-//   loginForm: FormGroup;
-
-//   constructor(
-//     private formBuilder: FormBuilder,
-//     private authService: AuthService
-//   ) { }
-
-//   ngOnInit(): void {
-//     this.loginForm = this.formBuilder.group({
-//       email: ['', [Validators.required, Validators.email]],
-//       password: ['', Validators.required]
-//     });
-//   }
-
-//   onSubmit() {
-//     if (this.loginForm.valid) {
-//       const email = this.loginForm.get('email').value;
-//       const password = this.loginForm.get('password').value;
-//       this.authService.loginWithEmail(email, password);
-//     }
-//   }
-
-//   loginWithGoogle() {
-//     this.authService.loginWithGoogle();
-//   }
-
-//   loginWithFacebook() {
-//     this.authService.loginWithFacebook();
-//   }
-// }
+      } else {
+        console.log('Login failed');
+      }
+    }, error => {
+      console.log('Login failed', error);
+    });
   }
+}

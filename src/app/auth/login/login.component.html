@@ -70,7 +70,7 @@
           <div class="col-md-6 offset-md-3">
             <h2 class="text-center text-primary mt-4 ">Connectez-vous!</h2>
             
-            <form class="login-form py-5 w-120">
+            <form class="login-form py-5 w-120" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
               <div class="row justify-content-center">
                 <div class="col-sm-6 col-md-6">
                   <a href="#" class="btn btn-info btn-block">
@@ -94,8 +94,14 @@
                   <div class="cols-sm-10">
                     <div class="input-group">
                       <span class="input-group-text"><i class="fas fa-user" aria-hidden="true"></i></span>
-                      <input type="text" name="" class="form-control input_user"   placeholder="Admin">
-                      
+                      <input type="text" name="" class="form-control input_user"  formControlName="email" placeholder="Adresse e-mail">
+                      <div
+                      *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.dirty
+                       || loginForm.get('email')?.touched">
+                      <div *ngIf="loginForm.get('email')?.errors?.['required']">l'adresse e-mail est  <span style="color:red;">obligatoire</span>
+                      </div>
+
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -105,14 +111,20 @@
                   <div class="cols-sm-10">
                     <div class="input-group">
                       <span class="input-group-text"><i class="fas fa-key"></i></span>
-                      <input type="password" name="" class="form-control input_pass"  placeholder="mot de passe">
-                      
+                      <input type="password" name="" class="form-control input_pass" formControlName="password"
+                      placeholder="Mot de passe">
+                      <div
+                      *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.dirty
+                       || loginForm.get('password')?.touched">
+                      <div *ngIf="loginForm.get('password')?.errors?.['required']">le Mot de passe est <span style="color:red;">obligatoire</span> </div>
+
+                    </div>                      
                     </div>
                   </div>
                 </div>
       
             
-                <button class="btn btn-primary mb-3 mt-3 w-100" (click)="login()">Connexion</button>
+                <button class="btn btn-primary mb-3 mt-3 w-100" [disabled]="loginForm.invalid">Connexion</button>
               
               <hr>
               <br><a class="text-sm text-paleBlue" routerLink="/forget-pass">Mot de passe oublié ?</a><br><small class="text-gray-500">vous n'avez pas encore un compte? </small><a class="text-sm text-paleBlue" routerLink="/sign-up">Inscrivez vous</a>
